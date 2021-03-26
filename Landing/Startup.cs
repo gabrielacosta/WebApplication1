@@ -16,6 +16,10 @@ namespace Landing
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services
+                .AddOrchardCms()
+                .AddMvc()
+                .WithFeatures();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +39,11 @@ namespace Landing
                     await context.Response.WriteAsync("Landing Page!");
                 });
             });
+
+
+            app.UseStaticFiles();
+            app.UseOrchardCore();
+
         }
     }
 }

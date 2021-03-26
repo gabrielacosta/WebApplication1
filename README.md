@@ -24,4 +24,5 @@ or
 https://localhost:5001/customer
 customer
 
-
+The main idea is trying to reuse the security on Orchard 
+to manage the users access to the pages that will be created on the modules administrator and customer.
